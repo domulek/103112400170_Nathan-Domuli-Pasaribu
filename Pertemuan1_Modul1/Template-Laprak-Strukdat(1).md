@@ -47,9 +47,25 @@ penjelasan singkat guided 3
 
 Buatlah program yang menerima input-an dua buah...
 
-```C++
-source code unguided 1
-```
+#include <iostream>
+using namespace std;
+
+int main (){
+    int bil1, bil2;
+    cout << "Masukkan Bilangan 1 : ";
+    cin >> bil1;
+    cout << "Masukkan Bilangan 2 : ";
+    cin >> bil2;
+
+    cout << "Penjumlahan : " << bil1 + bil2 << endl;
+    cout << "Pengurangan : " << bil1 - bil2 << endl;
+    cout << "Pembagian : " << bil1 / bil2 << endl;
+    cout << "Perkalian : " << bil1 * bil2 << endl;
+
+    return 0;
+}
+
+
 ### Output Unguided 1 :
 
 ##### Output 1
@@ -67,9 +83,35 @@ penjelasan unguided 1
 
 Buatlah sebuah program yang menerima masukan angka dan mengeluarkan output...
 
-```C++
-source code unguided 2
-```
+#include <iostream>
+using namespace std;
+
+int main (){
+    int angka;
+    cout << "Masukkan angka 1-100 : ";
+    cin >> angka;
+
+   string satuan[] = {"", "satu", "dua", "tiga", "empat", "lima",
+                       "enam", "tujuh", "delapan", "sembilan"};
+
+    if (angka == 0) cout << "nol";
+        
+    else if (angka == 100) cout << "seratus";
+
+    else if (angka < 10) cout << satuan[angka];
+
+    else if (angka == 10) cout << "sepuluh";
+
+    else if (angka == 11) cout << "sebelas";
+
+    else if (angka < 20) 
+        cout << satuan[angka % 10] << " belas";
+    
+    else if (angka < 100) {
+        cout << satuan[angka / 10] << " puluh";
+        if (angka % 10 != 0) cout << " " << satuan[angka % 10];
+    }
+}
 ### Output Unguided 2 :
 
 ##### Output 1
@@ -87,9 +129,33 @@ penjelasan unguided 2
 
 Buatlah program yang dapat memberikan input...
 
-```C++
-source code unguided 3
-```
+#include <iostream>
+using namespace std;
+
+int main () {
+    int n;
+    cout << "input: ";
+    cin >> n;
+    cout << "output:\n";
+
+    for (int i = n; i >= 1; i--) {
+        
+        for (int s = n; s > i; s--) cout << "  ";
+
+            
+        for (int j = i; j >= 1; j--) cout << j << " ";
+
+        cout << "* ";
+
+        for (int j = 1; j <= i; j++) cout << j << " ";
+
+        cout << endl;
+    }
+
+    for (int s = 0; s < n; s++) cout << "  ";
+    cout << "*" << endl;
+    return 0;
+}
 ### Output Unguided 3 :
 
 ##### Output 1
