@@ -43,7 +43,9 @@ penjelasan singkat guided 3
 
 ## Unguided 
 
-### 1. (isi dengan soal unguided 1)
+### 1. Soal Unguided 1
+
+Buatlah program yang menerima input-an dua buah...
 
 ```C++
 source code unguided 1
@@ -61,7 +63,9 @@ contoh :
 
 penjelasan unguided 1 
 
-### 2. (isi dengan soal unguided 2)
+### 2. Soal Unguided 2
+
+Buatlah sebuah program yang menerima masukan angka dan mengeluarkan output...
 
 ```C++
 source code unguided 2
@@ -79,7 +83,9 @@ contoh :
 
 penjelasan unguided 2
 
-### 3. (isi dengan soal unguided 3)
+### 3. Soal unguided 3
+
+Buatlah program yang dapat memberikan input...
 
 ```C++
 source code unguided 3
