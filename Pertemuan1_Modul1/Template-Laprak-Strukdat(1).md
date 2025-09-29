@@ -218,7 +218,7 @@ int main () {
 ![Screenshot Output Unguided 3_1](https://github.com/domulek/103112400170_Nathan-Domuli-Pasaribu/blob/3a023cb8d09a68f5ee9d9598e2d10a94f9cc2a59/Pertemuan1_Modul1/Output-Unguide3-Modul1.png)
 
 
-Program ini
+Program ini menggunakan for sebagai perulangan, i-- digunakan untuk membuat cetak atas ke bawah. S-- menambahkan spasi, j-- mencetak angka menurun serta j++ mencetak angka menaik. Operator ++ dan (--) untuk mengatur arah iterasi perulangan
 
 
 ## Kesimpulan
