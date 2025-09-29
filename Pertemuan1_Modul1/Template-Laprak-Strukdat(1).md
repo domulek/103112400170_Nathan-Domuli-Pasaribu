@@ -218,13 +218,8 @@ int main () {
 ![Screenshot Output Unguided 3_1](https://github.com/domulek/103112400170_Nathan-Domuli-Pasaribu/blob/3a023cb8d09a68f5ee9d9598e2d10a94f9cc2a59/Pertemuan1_Modul1/Output-Unguide3-Modul1.png)
 
 
-ChatGPT bilang:
+Program ini
 
-- Di program ini, perulangan for digunakan untuk mengatur pencetakan pola angka dan spasi. Perulangan pertama for (int i = n; i >= 1; i--) mengontrol baris pola, dimulai dari angka terbesar n dan berkurang satu per satu hingga 1, sehingga pola dicetak dari atas ke bawah. 
-
-- Perulangan kedua for (int s = n; s > i; s--) menambahkan spasi di awal setiap baris agar angka dan bintang berada pada posisi yang rapi. 
-
-- Selanjutnya, for (int j = i; j >= 1; j--) digunakan untuk mencetak angka menurun di sisi kiri bintang, sedangkan for (int j = 1; j <= i; j++) mencetak angka menaik di sisi kanan bintang. Operator ++ dan -- digunakan untuk mengatur arah iterasi: ++ meningkatkan nilai variabel perulangan setiap langkah, sedangkan (--) menguranginya, sehingga program bisa mencetak angka atau spasi secara berurutan sesuai pola yang diinginkan.
 
 ## Kesimpulan
 ...
