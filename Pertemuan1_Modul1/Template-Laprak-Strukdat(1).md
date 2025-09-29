@@ -20,26 +20,91 @@ Linked list atau yang disebut juga senarai berantai adalah Salah satu bentuk str
 
 ## Guided 
 
-### 1. ...
+### 1. Operator Aritmatika
 
-```C++
-source code guided 1
-```
-penjelasan singkat guided 1
+#include <iostream>
+using namespace std;
 
-### 2. ...
+int main(){
+    int angka1, angka2;
+    cout << "masukkan angka 1 : ";
+    cin >> angka1;
+    cout << "masukkan angka 2 : ";
+    cin >> angka2;
 
-```C++
-source code guided 2
-```
-penjelasan singkat guided 2
+    cout << "penjumlahan : " << angka1 + angka2 << endl;
+    cout << "pengurangan : " << angka1 - angka2 << endl;
+    cout << "perkalian : " << angka1 * angka2 << endl;
+    cout << " pembagian : " << angka1 / angka2 << endl;
+    return 0;
+    
+}
 
-### 3. ...
+Program ini digunakan untuk meminta dua angka dari pengguna, kemudian menghitung dan menampilkan hasil operasi aritmatika dasar dari kedua angka tersebut, yaitu penjumlahan, pengurangan, perkalian, dan pembagian.
 
-```C++
-source code guided 3
-```
-penjelasan singkat guided 3
+### 2. Struct
+
+#include<iostream>
+using namespace std;
+
+int main(){
+    const int MAX = 3;
+    struct rapot{
+        string nama;
+        float nilai;
+    };
+    rapot siswa[MAX];
+
+    for (int i = 0; i < MAX; i++){
+        cout << "masukkan nama siswa : ";
+        cin >> siswa[i].nama;
+        cout << endl;
+        cout<< "masukkan nilai siswa : ";
+        cin >> siswa[i].nilai;
+    }
+    
+    int j = 0;
+    while(j < MAX){
+        cout << "Nama siswa : " << siswa[j].nama << ", Nilai : " << siswa[j].nilai << endl;
+        j++;
+    }
+
+    return 0;
+}
+
+Program ini digunakan untuk menyimpan dan menampilkan data rapot siswa, berupa nama dan nilai.
+
+### 3. Perulangan
+
+#include <iostream>
+using namespace std;
+
+int main (){
+    int angka1;
+    cout << "Masukkan angka 1 : ";
+    cin >> angka1 ;
+
+    for(int i = 0; i < angka1; i++){ //increment
+        cout << i << " - " ;
+    }
+    cout << endl ;
+
+    int j = 10;
+    while (j > angka1){
+        cout << j << " - " ;
+        j --; //decrement
+    }
+
+    cout << endl ;
+
+    int k = 10 ;
+    do {
+        cout << k << " - ";
+    } while (k < angka1) ;
+
+    return 0;
+}
+Program ini digunakan untuk memperlihatkan cara kerja tiga jenis perulangan (for, while, dan do…while) dengan menggunakan input angka dari pengguna.
 
 ## Unguided 
 
@@ -68,16 +133,12 @@ int main (){
 
 ### Output Unguided 1 :
 
-##### Output 1
-![Screenshot Output Unguided 1_1](https://github.com/(username github kalian)/(nama repository github kalian)/blob/main/(path folder menyimpan screenshot output)/(nama file screenshot output).png)
+##### Output 
+![Screenshot Output Unguided 1_1](https://github.com/domulek/103112400170_Nathan-Domuli-Pasaribu/blob/3a023cb8d09a68f5ee9d9598e2d10a94f9cc2a59/Pertemuan1_Modul1/Output-Unguided1-Modul1.png)
 
-contoh :
-![Screenshot Output Unguided 1_1](https://github.com/DhimazHafizh/2311102151_Muhammad-Dhimas-Hafizh-Fathurrahman/blob/main/Pertemuan1_Modul1/Output-Unguided1-1.png)
 
-##### Output 2
-![Screenshot Output Unguided 1_2](https://github.com/(username github kalian)/(nama repository github kalian)/blob/main/(path folder menyimpan screenshot output)/(nama file screenshot output).png)
+Program di atas adalah sebuah program sederhana dalam C++ yang berfungsi untuk melakukan operasi aritmatika dasar. Pertama, program meminta pengguna untuk memasukkan dua bilangan, yaitu bilangan 1 dan bilangan 2. Setelah kedua bilangan dimasukkan, program langsung menghitung hasil dari penjumlahan, pengurangan, pembagian, dan perkalian dengan menggunakan nilai yang telah diinputkan tersebut. Hasil dari setiap operasi kemudian ditampilkan ke layar. Dengan demikian, program ini berguna sebagai contoh sederhana bagaimana melakukan input, melakukan perhitungan aritmatika, dan menampilkan output dalam bahasa C++.
 
-penjelasan unguided 1 
 
 ### 2. Soal Unguided 2
 
@@ -114,16 +175,11 @@ int main (){
 }
 ### Output Unguided 2 :
 
-##### Output 1
-![Screenshot Output Unguided 2_1](https://github.com/(username github kalian)/(nama repository github kalian)/blob/main/(path folder menyimpan screenshot output)/(nama file screenshot output).png)
+##### Output 
+![Screenshot Output Unguided 2_1](https://github.com/domulek/103112400170_Nathan-Domuli-Pasaribu/blob/3a023cb8d09a68f5ee9d9598e2d10a94f9cc2a59/Pertemuan1_Modul1/Output-Unguide2-Modul1.png)
 
-contoh :
-![Screenshot Output Unguided 2_1](https://github.com/DhimazHafizh/2311102151_Muhammad-Dhimas-Hafizh-Fathurrahman/blob/main/Pertemuan1_Modul1/Output-Unguided2-1.png)
 
-##### Output 2
-![Screenshot Output Unguided 2_2](https://github.com/(username github kalian)/(nama repository github kalian)/blob/main/(path folder menyimpan screenshot output)/(nama file screenshot output).png)
-
-penjelasan unguided 2
+Program ini mengubah input angka 0–100 menjadi tulisan dalam bahasa Indonesia. Angka dicek dengan kondisi if: 0 jadi nol, 100 jadi seratus, 1–9 memakai array satuan, angka khusus seperti 10 dan 11 ditangani terpisah, 12–19 menggunakan format belas, sedangkan 20–99 menggunakan format puluh ditambah satuan jika tidak nol.
 
 ### 3. Soal unguided 3
 
@@ -158,16 +214,17 @@ int main () {
 }
 ### Output Unguided 3 :
 
-##### Output 1
-![Screenshot Output Unguided 3_1](https://github.com/(username github kalian)/(nama repository github kalian)/blob/main/(path folder menyimpan screenshot output)/(nama file screenshot output).png)
+##### Output 
+![Screenshot Output Unguided 3_1](https://github.com/domulek/103112400170_Nathan-Domuli-Pasaribu/blob/3a023cb8d09a68f5ee9d9598e2d10a94f9cc2a59/Pertemuan1_Modul1/Output-Unguide3-Modul1.png)
 
-contoh :
-![Screenshot Output Unguided 3_1](https://github.com/DhimazHafizh/2311102151_Muhammad-Dhimas-Hafizh-Fathurrahman/blob/main/Pertemuan1_Modul1/Output-Unguided3-1.png)
 
-##### Output 2
-![Screenshot Output Unguided 3_2](https://github.com/(username github kalian)/(nama repository github kalian)/blob/main/(path folder menyimpan screenshot output)/(nama file screenshot output).png)
+ChatGPT bilang:
 
-penjelasan unguided 3
+- Di program ini, perulangan for digunakan untuk mengatur pencetakan pola angka dan spasi. Perulangan pertama for (int i = n; i >= 1; i--) mengontrol baris pola, dimulai dari angka terbesar n dan berkurang satu per satu hingga 1, sehingga pola dicetak dari atas ke bawah. 
+
+- Perulangan kedua for (int s = n; s > i; s--) menambahkan spasi di awal setiap baris agar angka dan bintang berada pada posisi yang rapi. 
+
+- Selanjutnya, for (int j = i; j >= 1; j--) digunakan untuk mencetak angka menurun di sisi kiri bintang, sedangkan for (int j = 1; j <= i; j++) mencetak angka menaik di sisi kanan bintang. Operator ++ dan -- digunakan untuk mengatur arah iterasi: ++ meningkatkan nilai variabel perulangan setiap langkah, sedangkan (--) menguranginya, sehingga program bisa mencetak angka atau spasi secara berurutan sesuai pola yang diinginkan.
 
 ## Kesimpulan
 ...
