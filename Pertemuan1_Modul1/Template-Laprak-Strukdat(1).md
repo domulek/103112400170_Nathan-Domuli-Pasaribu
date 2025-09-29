@@ -2,21 +2,39 @@
 <p align="center">Nathan Domuli Pasaribu - 103112400170</p>
 
 ## Dasar Teori
-isi dengan penjelasan dasar teori disertai referensi jurnal (gunakan kurung siku [] untuk pernyataan yang mengambil refernsi dari jurnal).
-contoh :
-Linked list atau yang disebut juga senarai berantai adalah Salah satu bentuk struktur data yang berisi kumpulan data yang tersusun secara sekuensial, saling bersambungan, dinamis, dan terbatas[1]. Linked list terdiri dari sejumlah node atau simpul yang dihubungkan secara linier dengan bantuan pointer.
+C++ adalah bahasa pemrograman yang kuat, fleksibel, dan menjadi dasar dari banyak aplikasi modern. Buku Pengenalan Pemrograman Dasar: Dunia Koding dengan C++ membimbing pembaca dari hal-hal sederhana seperti struktur program dan tipe data, lalu bertahap menuju konsep lanjutan seperti OOP, manajemen memori, dan file. Dengan pendekatan ini, pemula dapat memahami logika pemrograman sekaligus belajar praktik terbaik menulis kode yang efisien dan mudah dipahami [1].
 
-### A. ...<br/>
-...
-#### 1. ...
-#### 2. ...
-#### 3. ...
+### A. Dasar Pemrograman C++
+Dasar pemrograman C++ mencakup konsep-konsep fundamental yang harus dipahami sebelum membuat program, seperti:
 
-### B. ...<br/>
-...
-#### 1. ...
-#### 2. ...
-#### 3. ...
+- Input dan Output: Menggunakan cin untuk input dari pengguna dan cout untuk menampilkan output ke layar.
+
+- Variabel dan Tipe Data: Menyimpan data dengan tipe seperti int, float, double, dan string.
+
+- Struktur Program: Program C++ biasanya memiliki fungsi main() sebagai titik awal eksekusi.
+
+- Operator: Digunakan untuk melakukan operasi matematika, logika, atau perbandingan.
+
+- Kontrol Alur: Perintah if, else, for, while, dan do…while digunakan untuk pengkondisian dan perulangan.
+
+### B. Operator Aritmatika
+
+Di C++, operator aritmatika digunakan untuk melakukan perhitungan dasar pada angka. Beberapa operator penting antara lain:
+
+(+) untuk penjumlahan
+
+(-) untuk pengurangan
+
+(*) untuk perkalian
+
+(/) untuk pembagian
+
+(%) untuk sisa pembagian (hanya untuk bilangan bulat)
+
+Operator ini bisa digunakan dengan tipe data seperti int, float, atau double untuk membuat program melakukan operasi matematika dasar
+
+### C. Struct
+Di C++, struct digunakan untuk mengelompokkan beberapa variabel yang berbeda tipe menjadi satu kesatuan. Dengan struct, kita bisa menyimpan data yang saling terkait, misalnya nama dan nilai siswa, sehingga lebih terstruktur dan mudah diakses dalam program.
 
 ## Guided 
 
@@ -225,6 +243,4 @@ Program ini menggunakan for sebagai perulangan, i-- digunakan untuk membuat ceta
 ...
 
 ## Referensi
-[1] Triase. (2020). Diktat Edisi Revisi : STRUKTUR DATA. Medan: UNIVERSTAS ISLAM NEGERI SUMATERA UTARA MEDAN. 
-<br>[2] Indahyati, Uce., Rahmawati Yunianita. (2020). "BUKU AJAR ALGORITMA DAN PEMROGRAMAN DALAM BAHASA C++". Sidoarjo: Umsida Press. Diakses pada 10 Maret 2024 melalui https://doi.org/10.21070/2020/978-623-6833-67-4.
-<br>...
+[1] Trianiza, I., Khirdany, E. N., Wahyudi, E., Vandika, A. Y., & Sofyan, S. (2025). Pengenalan Pemrograman Dasar Dunia Koding dengan C++.
