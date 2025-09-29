@@ -240,7 +240,7 @@ Program ini menggunakan for sebagai perulangan, i-- digunakan untuk membuat ceta
 
 
 ## Kesimpulan
-...
+Modul 1 mempelajari dasar penggunaan C++ dengan aritmatika, penggunaan struct, perulangan dan sebagainya. Pada bagian unguided, kita mengimplementasikan operasi aritmatika sederhana, mengubah angka menjadi bentuk kata dalam bahasa Indonesia, serta membuat pola menggunakan kombinasi angka dan simbol.
 
 ## Referensi
 [1] Trianiza, I., Khirdany, E. N., Wahyudi, E., Vandika, A. Y., & Sofyan, S. (2025). Pengenalan Pemrograman Dasar Dunia Koding dengan C++.
