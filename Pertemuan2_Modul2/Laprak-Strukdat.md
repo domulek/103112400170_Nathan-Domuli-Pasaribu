@@ -10,7 +10,7 @@ Array dalam bahasa C++ merupakan kumpulan data yang memiliki tipe yang sama dan 
 ### B. Pointer
 Pointer adalah variabel khusus yang digunakan untuk menyimpan alamat memori dari variabel lain. Dengan pointer, kita dapat mengakses dan memodifikasi data secara tidak langsung melalui alamat memori tersebut. Konsep ini memungkinkan pengelolaan data menjadi lebih efisien dan fleksibel dalam pemrograman C++.
 
-### B. Prosedur
+### C. Prosedur
 Prosedur adalah bagian program terpisah yang berisi sekumpulan perintah untuk menjalankan fungsi tertentu, seperti menampilkan hasil atau melakukan proses perhitungan. Prosedur dapat menerima parameter sebagai masukan, namun tidak mengembalikan nilai seperti halnya fungsi.
 
 ## Guided 
