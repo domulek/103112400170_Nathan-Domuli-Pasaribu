@@ -299,7 +299,7 @@ penjelasan unguided 2
 Program ini menghitung luas dan keliling persegi panjang dengan menggunakan konsep pointer untuk mengakses dan mengubah nilai variabel panjang serta lebar secara tidak langsung, lalu hasil perhitungan ditampilkan sebelum dan sesudah nilai diubah menggunakan pointer.
 
 ## Kesimpulan
-...
+Dalam praktikum modul 2 ini dibahas mengenai array, pointer, dan prosedur dalam bahasa pemrograman C++. Konsep array digunakan untuk menyimpan dan mengelola data dalam jumlah besar secara efisien tanpa perlu mendeklarasikan banyak variabel. Sementara itu, pointer memberikan fleksibilitas tinggi dalam pengelolaan memori serta meningkatkan efisiensi program, khususnya saat bekerja dengan array dinamis dan struktur data kompleks seperti linked list maupun tree. Selain itu, penerapan fungsi atau prosedur berperan penting dalam membagi program menjadi bagian-bagian kecil yang terorganisir dan mudah dikelola. Dengan mengombinasikan konsep array, pointer, dan prosedur dalam C++, programmer dapat menciptakan kode yang efisien, modular, serta mudah dipahami.
 
 ## Referensi
 [1] Triase. (2020). Diktat Edisi Revisi : STRUKTUR DATA. Medan: UNIVERSTAS ISLAM NEGERI SUMATERA UTARA MEDAN. 
