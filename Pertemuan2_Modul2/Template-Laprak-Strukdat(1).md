@@ -1,5 +1,5 @@
 # <h1 align="center">Laporan Praktikum Modul 1 - Codeblocks IDE & Pengenalan Bahas C++ (Bagian Pertama)</h1>
-<p align="center">Muhammad Dhimas Hafizh Fathurrahman - 2311102151</p>
+<p align="center">Nathan Domuli Pasaribu - 103112400170</p>
 
 ## Dasar Teori
 isi dengan penjelasan dasar teori disertai referensi jurnal (gunakan kurung siku [] untuk pernyataan yang mengambil refernsi dari jurnal).
@@ -218,11 +218,117 @@ int main () {
 
 ## Unguided 
 
-### 1. (isi dengan soal unguided 1)
+### 1. Diketahui 2 buah matriks 3x3 seperti dibawah ini :
+matriksA = 
+[7 12 22
+31 6 41
+15 19 36]
+MatriksB = 
+[11 34 7
+3 25 41
+5 18 33]
+Buatlah program yang dapat melakukan operasi penjumlahan, pengurangan, dan perkalian
+matriks 3x3 tersebut. Buat prosedur untuk masing-masing operasi yang dilakukan;
+jumlahMatriks() untuk operasi penjumlahan, kurangMatriks() untuk pengurangan, dan
+kaliMatriks() untuk perkalian. Buat program tersebut menggunakan menu switch-case
+seperti berikut ini :
+--- Menu Program Matriks ---
+1. Penjumlahan matriks
+2. Pengurangan matriks
+3. Perkalian matriks
+4. Keluar
 
-```C++
-source code unguided 1
-```
+
+#include <iostream>
+using namespace std;
+
+void tampilkanHasil(int arr[3][3]) {
+    for (int i = 0; i < 3; i++) {
+        for (int j = 0; j < 3; j++) {
+            cout << arr[i][j] << "\t";
+        }
+        cout << endl;
+    }
+}
+
+int main() {
+    int matriksA[3][3] = {
+        {7, 12, 22},
+        {31, 6, 41},
+        {15, 19, 36}
+    };
+
+    int matriksB[3][3] = {
+        {11, 34, 7},
+        {3, 25, 41},
+        {5, 18, 33}
+    };
+
+    int hasil[3][3] = {0};
+    int pilihan;
+
+    do {
+        cout << "\n=== MENU PROGRAM MATRIKS ===\n";
+        cout << "1. Penjumlahan Matriks\n";
+        cout << "2. Pengurangan Matriks\n";
+        cout << "3. Perkalian Matriks\n";
+        cout << "4. Keluar\n";
+        cout << "Pilih menu: ";
+        cin >> pilihan;
+        cout << endl;
+
+        switch (pilihan) {
+            case 1:
+                for (int i = 0; i < 3; i++) {
+                    for (int j = 0; j < 3; j++) {
+                        hasil[i][j] = matriksA[i][j] + matriksB[i][j];
+                    }
+                }
+                cout << "Hasil Penjumlahan Matriks:" << endl;
+                tampilkanHasil(hasil);
+                cout << endl;
+                break;
+
+            case 2:
+                for (int i = 0; i < 3; i++) {
+                    for (int j = 0; j < 3; j++) {
+                        hasil[i][j] = matriksA[i][j] - matriksB[i][j];
+                    }
+                }
+                cout << "Hasil Pengurangan Matriks:" << endl;
+                tampilkanHasil(hasil);
+                cout << endl;
+                break;
+
+            case 3:
+                for (int i = 0; i < 3; i++) {
+                    for (int j = 0; j < 3; j++) {
+                        hasil[i][j] = 0;
+                        for (int k = 0; k < 3; k++) {
+                            hasil[i][j] += matriksA[i][k] * matriksB[k][j];
+                        }
+                    }
+                }
+                cout << "Hasil Perkalian Matriks:" << endl;
+                tampilkanHasil(hasil);
+                cout << endl;
+                break;
+
+            case 4:
+
+                cout << "Program selesai." << endl;
+                break;
+
+            default:
+                cout << "Pilihan tidak valid!" << endl;
+        }
+    } while (pilihan != 4);
+
+    return 0;
+}
+
+
+
 ### Output Unguided 1 :
 
 ##### Output 1
@@ -236,7 +342,19 @@ contoh :
 
 penjelasan unguided 1 
 
-### 2. (isi dengan soal unguided 2)
+### 2. Buatlah program menghitung luas dan keliling persegi panjang dengan proses perhitungan
+dan perubahan nilainya menggunakan pointer, seperti berikut:
+1) Buatlah 3 variabel integer di fungsi main(): panjang (beri nilai 10), lebar (beri nilai 5), dan
+luas (beri nilai 0).
+2) Deklarasikan dua pointer: ptrPanjang yang menunjuk ke variabel panjang, dan ptrLebar
+yang menunjuk ke variabel lebar.
+3) Hitung luas persegi panjang tersebut dan simpan hasilnya ke dalam variabel luas.
+Syarat: Proses perhitungan ini wajib menggunakan ptrPanjang dan ptrLebar.
+4) Cetak nilai luas ke layar.
+5) Setelah itu, ubah nilai panjang menjadi 12 dan lebar menjadi 6, juga hanya melalui
+pointer ptrPanjang dan ptrLebar.
+6) Cetak nilai panjang dan lebar yang baru untuk membuktikan bahwa
+nilainya telah berubah.
 
 ```C++
 source code unguided 2
@@ -254,23 +372,6 @@ contoh :
 
 penjelasan unguided 2
 
-### 3. (isi dengan soal unguided 3)
-
-```C++
-source code unguided 3
-```
-### Output Unguided 3 :
-
-##### Output 1
-![Screenshot Output Unguided 3_1](https://github.com/(username github kalian)/(nama repository github kalian)/blob/main/(path folder menyimpan screenshot output)/(nama file screenshot output).png)
-
-contoh :
-![Screenshot Output Unguided 3_1](https://github.com/DhimazHafizh/2311102151_Muhammad-Dhimas-Hafizh-Fathurrahman/blob/main/Pertemuan1_Modul1/Output-Unguided3-1.png)
-
-##### Output 2
-![Screenshot Output Unguided 3_2](https://github.com/(username github kalian)/(nama repository github kalian)/blob/main/(path folder menyimpan screenshot output)/(nama file screenshot output).png)
-
-penjelasan unguided 3
 
 ## Kesimpulan
 ...
