@@ -160,8 +160,6 @@ int main() {
 ![Screenshot Output Unguided 1_1](https://github.com/domulek/103112400170_Nathan-Domuli-Pasaribu/blob/main/Pertemuan3_Modul3/Output%20Unguided-Modul3-Soalno1.png)
 
 
-
-penjelasan unguided 1 
 Program ini dibuat untuk menghitung dan menampilkan nilai akhir dari beberapa mahasiswa. Setiap mahasiswa memiliki data berupa nama, NIM, nilai UTS, UAS, dan tugas yang disimpan dalam struktur bernama Mahasiswa. Perhitungan nilai akhir dilakukan dengan rumus yang memberi bobot 30% pada nilai UTS, 40% pada nilai UAS, dan 30% pada nilai tugas. Setelah pengguna memasukkan jumlah mahasiswa dan data masing-masing, program akan menghitung nilai akhir mereka secara otomatis, lalu menampilkan hasil berupa nama, NIM, serta nilai akhir setiap mahasiswa di layar.
 
 
@@ -232,7 +230,6 @@ int main() {
 
 
 
-penjelasan unguided 2
 Program ini menggunakan struct untuk menyimpan data mata pelajaran berupa nama dan kode. Fungsi create_pelajaran digunakan untuk membuat objek mata pelajaran berdasarkan data yang diberikan, sedangkan tampil_pelajaran menampilkan hasilnya ke layar. Pada fungsi main, program membuat mata pelajaran struktur data dengan kode STD dan menampilkannya.
 
 ### 3. Buatlah program dengan ketentuan: 
@@ -305,8 +302,8 @@ int main() {
 
 ##### Output 1
 ![Screenshot Output Unguided 3_1](https://github.com/domulek/103112400170_Nathan-Domuli-Pasaribu/blob/main/Pertemuan3_Modul3/Output%20Unguided-Modul3-Soalno3.png)
-~
-penjelasan unguided 3
+
+
 Program ini menampilkan dua array 3x3, A dan B, lalu meminta pengguna memilih posisi baris dan kolom untuk menukar elemen pada posisi tersebut antara kedua array. Setelah pertukaran, program menampilkan hasil array yang sudah diperbarui. Selain itu, terdapat contoh penggunaan pointer untuk menukar nilai dua variabel (x dan y) menggunakan fungsi tukarpointer
 
 ## Kesimpulan
