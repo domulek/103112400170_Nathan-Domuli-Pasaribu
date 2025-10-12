@@ -2,25 +2,19 @@
 <p align="center"> Nathan Domuli Pasaribu - 103112400170 </p>
 
 ## Dasar Teori
-isi dengan penjelasan dasar teori disertai referensi jurnal (gunakan kurung siku [] untuk pernyataan yang mengambil refernsi dari jurnal).
-contoh :
-Linked list atau yang disebut juga senarai berantai adalah Salah satu bentuk struktur data yang berisi kumpulan data yang tersusun secara sekuensial, saling bersambungan, dinamis, dan terbatas[1]. Linked list terdiri dari sejumlah node atau simpul yang dihubungkan secara linier dengan bantuan pointer.
+Struktur data menggambarkan sekumpulan data yang dibedakan berdasarkan cara pengorganisasiannya serta operasi yang diterapkan padanya. Pemilihan struktur data yang sesuai dalam proses pemrograman akan membantu menghasilkan algoritma yang lebih efisien dan mudah dipahami, sehingga membuat keseluruhan program menjadi lebih sederhana.[1]
 
-### A. ...<br/>
-...
-#### 1. ...
-#### 2. ...
-#### 3. ...
+### A. Pointer
+Single Linked List dalam bahasa C merupakan struktur data berantai satu arah, di mana setiap elemen atau node terdiri atas dua bagian utama, yaitu data yang berisi nilai yang disimpan seperti angka atau karakter, serta pointer yang berfungsi sebagai penunjuk alamat menuju node berikutnya dalam urutan.
 
-### B. ...<br/>
-...
-#### 1. ...
-#### 2. ...
-#### 3. ...
+### B. Single Linked List
+Double Linked List atau Doubly Linked List adalah struktur data berantai dua arah yang memungkinkan setiap elemen atau node terhubung ke node sebelumnya maupun node berikutnya. Setiap node memiliki dua pointer, yaitu pointer pertama yang menunjuk ke node sebelumnya dan pointer kedua yang menunjuk ke node berikutnya, serta menyimpan data di antara kedua pointer tersebut.
 
 ## Guided 
 
-### 1. ...
+### 1. Soal Guided 1
+
+```C++
 
 #include <iostream>
 #include"mahasiswa.h"
@@ -75,9 +69,13 @@ int main() {
 
     return 0;
 }
+```
 
-### 2. Struct
+Program ini membentuk struktur data Linked List dengan tipe data float. Program tersebut diawali dengan membuat daftar awal yang berisi beberapa elemen, kemudian menampilkan isinya. Setelah itu, pengguna diminta untuk memasukkan sebuah angka baru yang akan disisipkan ke dalam daftar secara berurutan (dari kecil ke besar). Terakhir, program menampilkan hasil akhir dari daftar setelah proses penyisipan dilakukan.
 
+### 2. Soal Guided 2
+
+```C++
 #include <iostream>
 using namespace std;
 
@@ -101,13 +99,15 @@ void InputMhs (mahasiswa &m){
 float rata2 (mahasiswa m){
     return (float)(m.nilai1 + m.nilai2)/2;
 }
+```
 
-Kode ini berfungsi untuk memasukkan data seorang mahasiswa dan menghitung rata-rata dua nilainya menggunakan fungsi terpisahdd
+Kode ini berfungsi untuk memasukkan data seorang mahasiswa dan menghitung rata-rata dua nilainya menggunakan fungsi terpisah
 
 ## Unguided 
 
 ### 1. Buat program yang dapat menyimpan data mahasiswa (max. 10) ke dalam sebuah array dengan field nama, nim, uts, uas, tugas, dan nilai akhir. Nilai akhir diperoleh dari FUNGSI dengan rumus 0.3 * uts+ 0.4 * uas + 0.3 * tugas
 
+```C++
 #include <iostream>
 using namespace std;
 
@@ -152,23 +152,24 @@ int main() {
 
     return 0;
 }
+```
 
 ### Output Unguided 1 :
 
 ##### Output 1
-![Screenshot Output Unguided 1_1](https://github.com/(username github kalian)/(nama repository github kalian)/blob/main/(path folder menyimpan screenshot output)/(nama file screenshot output).png)
+![Screenshot Output Unguided 1_1](https://github.com/domulek/103112400170_Nathan-Domuli-Pasaribu/blob/main/Pertemuan3_Modul3/Output%20Unguided-Modul3-Soalno1.png)
 
-contoh :
-![Screenshot Output Unguided 1_1](https://github.com/DhimazHafizh/2311102151_Muhammad-Dhimas-Hafizh-Fathurrahman/blob/main/Pertemuan1_Modul1/Output-Unguided1-1.png)
 
-##### Output 2
-![Screenshot Output Unguided 1_2](https://github.com/(username github kalian)/(nama repository github kalian)/blob/main/(path folder menyimpan screenshot output)/(nama file screenshot output).png)
 
 penjelasan unguided 1 
+Program ini dibuat untuk menghitung dan menampilkan nilai akhir dari beberapa mahasiswa. Setiap mahasiswa memiliki data berupa nama, NIM, nilai UTS, UAS, dan tugas yang disimpan dalam struktur bernama Mahasiswa. Perhitungan nilai akhir dilakukan dengan rumus yang memberi bobot 30% pada nilai UTS, 40% pada nilai UAS, dan 30% pada nilai tugas. Setelah pengguna memasukkan jumlah mahasiswa dan data masing-masing, program akan menghitung nilai akhir mereka secara otomatis, lalu menampilkan hasil berupa nama, NIM, serta nilai akhir setiap mahasiswa di layar.
+
 
 ### 2. Buatlah ADT pelajaran dengan file "pelajaran.h" lalu buat implementasi ADT pelajran dalam file "pelajaran.cpp" lalu coba hasil implementasi ADT dalam file "main.cpp"
 
 pelajaran.cpp
+
+```C++
 
 #include <iostream>
 #include "pelajaran.h"
@@ -185,9 +186,10 @@ void tampil_pelajaran(Pelajaran pel) {
     cout << "nama pelajaran : " << pel.namaMapel << endl;
     cout << "nilai : " << pel.kodeMapel << endl;
 }
+```
 
 pelajaran.h
-
+```C++
 #ifndef PELAJARAN_H_INCLUDED
 #define PELAJARAN_H_INCLUDED
 
@@ -204,9 +206,9 @@ Pelajaran create_pelajaran(string nama, string kode);
 void tampil_pelajaran(Pelajaran pel);
 
 #endif 
-
+```
 main.cpp 
-
+```C++
 #include <iostream>
 #include "pelajaran.h"
 using namespace std;
@@ -221,26 +223,24 @@ int main() {
 
     return 0;
 }
-
+```
 
 ### Output Unguided 2 :
 
 ##### Output 1
-![Screenshot Output Unguided 2_1](https://github.com/(username github kalian)/(nama repository github kalian)/blob/main/(path folder menyimpan screenshot output)/(nama file screenshot output).png)
+![Screenshot Output Unguided 2_1](https://github.com/domulek/103112400170_Nathan-Domuli-Pasaribu/blob/main/Pertemuan3_Modul3/Output%20Unguided-Modul3-Soalno2.png)
 
-contoh :
-![Screenshot Output Unguided 2_1](https://github.com/DhimazHafizh/2311102151_Muhammad-Dhimas-Hafizh-Fathurrahman/blob/main/Pertemuan1_Modul1/Output-Unguided2-1.png)
 
-##### Output 2
-![Screenshot Output Unguided 2_2](https://github.com/(username github kalian)/(nama repository github kalian)/blob/main/(path folder menyimpan screenshot output)/(nama file screenshot output).png)
 
 penjelasan unguided 2
+Program ini menggunakan struct untuk menyimpan data mata pelajaran berupa nama dan kode. Fungsi create_pelajaran digunakan untuk membuat objek mata pelajaran berdasarkan data yang diberikan, sedangkan tampil_pelajaran menampilkan hasilnya ke layar. Pada fungsi main, program membuat mata pelajaran struktur data dengan kode STD dan menampilkannya.
 
 ### 3. Buatlah program dengan ketentuan: 
 ### 2 buah array 2D integer berukuran 3x3 dan 2 buah pointer integer 
 ### fungsi/prosedur yang menampilkan isi sebuah array integer 2D 
 ### fungsi/prosedur yang akan menukarkan isi dari 2 array integer 2D pada posisi tertentu fungsi/prosedur yang akan menukarkan isi dari variabel yang ditunjuk oleh 2 buah pointer
 
+```C++
 #include <iostream>
 using namespace std;
 
@@ -299,23 +299,18 @@ int main() {
 
     return 0;
 }
-
+```
 
 ### Output Unguided 3 :
 
 ##### Output 1
-![Screenshot Output Unguided 3_1](https://github.com/(username github kalian)/(nama repository github kalian)/blob/main/(path folder menyimpan screenshot output)/(nama file screenshot output).png)
-
-contoh :
-![Screenshot Output Unguided 3_1](https://github.com/DhimazHafizh/2311102151_Muhammad-Dhimas-Hafizh-Fathurrahman/blob/main/Pertemuan1_Modul1/Output-Unguided3-1.png)
-
-##### Output 2
-![Screenshot Output Unguided 3_2](https://github.com/(username github kalian)/(nama repository github kalian)/blob/main/(path folder menyimpan screenshot output)/(nama file screenshot output).png)
-
+![Screenshot Output Unguided 3_1](https://github.com/domulek/103112400170_Nathan-Domuli-Pasaribu/blob/main/Pertemuan3_Modul3/Output%20Unguided-Modul3-Soalno3.png)
+~
 penjelasan unguided 3
+Program ini menampilkan dua array 3x3, A dan B, lalu meminta pengguna memilih posisi baris dan kolom untuk menukar elemen pada posisi tersebut antara kedua array. Setelah pertukaran, program menampilkan hasil array yang sudah diperbarui. Selain itu, terdapat contoh penggunaan pointer untuk menukar nilai dua variabel (x dan y) menggunakan fungsi tukarpointer
 
 ## Kesimpulan
-...
+ADT berfungsi untuk memisahkan antara logika pengolahan data dengan cara implementasinya, sehingga program menjadi lebih mudah dipahami dan dikelola. STRUCT digunakan untuk membuat tipe data baru seperti data mahasiswa atau pelajaran. Sementara itu, Linked List merupakan contoh penerapan ADT yang memanfaatkan pointer untuk menghubungkan antar elemen data.
 
 ## Referensi
 [1] Triase. (2020). Diktat Edisi Revisi : STRUKTUR DATA. Medan: UNIVERSTAS ISLAM NEGERI SUMATERA UTARA MEDAN. 
