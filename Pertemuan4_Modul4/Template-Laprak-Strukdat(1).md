@@ -2,21 +2,11 @@
 <p align="center"> Nathan Domuli Pasaribu - 103112400170</p>
 
 ## Dasar Teori
-isi dengan penjelasan dasar teori disertai referensi jurnal (gunakan kurung siku [] untuk pernyataan yang mengambil refernsi dari jurnal).
-contoh :
-Linked list atau yang disebut juga senarai berantai adalah Salah satu bentuk struktur data yang berisi kumpulan data yang tersusun secara sekuensial, saling bersambungan, dinamis, dan terbatas[1]. Linked list terdiri dari sejumlah node atau simpul yang dihubungkan secara linier dengan bantuan pointer.
+Linked List atau senarai berantai adalah salah satu bentuk struktur data dinamis yang terdiri dari kumpulan elemen yang saling terhubung melalui pointer. Setiap elemen pada linked list disebut node, yang umumnya terdiri dari dua bagian utama, yaitu data (informasi yang disimpan) dan pointer (penunjuk ke node berikutnya) [1]. Tidak seperti array yang memiliki ukuran tetap, linked list bersifat dinamis, artinya ukuran dan jumlah elemennya dapat berubah selama program berjalan [2].
 
-### A. ...<br/>
-...
-#### 1. ...
-#### 2. ...
-#### 3. ...
+### A. Singly Linked List
+Singly linked list merupakan struktur data linear di mana setiap elemen, disebut node (simpul), menyimpan data serta sebuah pointer yang mengarah hanya ke node berikutnya dalam urutan. Karena memiliki satu arah penunjuk, proses penelusuran hanya dapat dilakukan dari bagian awal (head) menuju bagian akhir (tail). Node terakhir dalam list akan menunjuk ke NULL, yang menandakan batas akhir dari daftar tersebut.
 
-### B. ...<br/>
-...
-#### 1. ...
-#### 2. ...
-#### 3. ...
 
 ## Guided 
 
@@ -566,56 +556,199 @@ int main() {
 ### Output Unguided 1 :
 
 ##### Output 1
-![Screenshot Output Unguided 1_1](https://github.com/(username github kalian)/(nama repository github kalian)/blob/main/(path folder menyimpan screenshot output)/(nama file screenshot output).png)
+![Screenshot Output Unguided 1_1](https://github.com/domulek/103112400170_Nathan-Domuli-Pasaribu/blob/main/Pertemuan4_Modul4/soalno1/Output-Unguided1-Modul4.png)
 
-contoh :
-![Screenshot Output Unguided 1_1](https://github.com/DhimazHafizh/2311102151_Muhammad-Dhimas-Hafizh-Fathurrahman/blob/main/Pertemuan1_Modul1/Output-Unguided1-1.png)
-
-##### Output 2
-![Screenshot Output Unguided 1_2](https://github.com/(username github kalian)/(nama repository github kalian)/blob/main/(path folder menyimpan screenshot output)/(nama file screenshot output).png)
-
-penjelasan unguided 1 
+Program C++ ini digunakan untuk melakukan operasi dasar pada dua matriks berukuran 3×3, yaitu penjumlahan, pengurangan, dan perkalian, dengan data matriks yang sudah ditentukan sebelumnya
 
 ### 2. (isi dengan soal unguided 2)
 
+singlylist.h
+
 ```C++
-source code unguided 2
+#ifndef SINGLYLIST_H
+#define SINGLYLIST_H
+
+#include <iostream>
+using namespace std;
+
+#define Nil NULL
+
+typedef int infotype;
+
+struct ElmList {
+    infotype info;
+    ElmList* next;
+};
+
+typedef ElmList* address;
+
+struct List {
+    address first;
+};
+
+void createList(List &L);
+address alokasi(infotype x);
+void dealokasi(address P);
+void insertFirst(List &L, address P);
+void printInfo(List L);
+void deleteFirst(List &L, address &P);
+void deleteLast(List &L, address &P);
+void deleteAfter(List &L, address Prec, address &P);
+int nbList(List L);
+void deleteList(List &L);
+
 ```
+
+singlylist.cpp
+
+```C++
+#include "Singlylist.h"
+
+void createList(List &L) {
+    L.first = Nil;
+}
+
+address alokasi(infotype x) {
+    address P = new ElmList;
+    P->info = x;
+    P->next = Nil;
+    return P;
+}
+
+void dealokasi(address P) {
+    delete P;
+}
+
+void insertFirst(List &L, address P) {
+    P->next = L.first;
+    L.first = P;
+}
+
+void printInfo(List L) {
+    address P = L.first;
+    while (P != Nil) {
+        cout << P->info << " ";
+        P = P->next;
+    }
+    cout << endl;
+}
+
+void deleteFirst(List &L, address &P) {
+    if (L.first != Nil) {
+        P = L.first;
+        L.first = L.first->next;
+        P->next = Nil;
+    } else {
+        P = Nil;
+    }
+}
+
+void deleteLast(List &L, address &P) {
+    if (L.first != Nil) {
+        if (L.first->next == Nil) {
+            P = L.first;
+            L.first = Nil;
+        } else {
+            address Q = L.first;
+            while (Q->next->next != Nil) {
+                Q = Q->next;
+            }
+            P = Q->next;
+            Q->next = Nil;
+        }
+    } else {
+        P = Nil;
+    }
+}
+
+void deleteAfter(List &L, address Prec, address &P) {
+    if (Prec != Nil && Prec->next != Nil) {
+        P = Prec->next;
+        Prec->next = P->next;
+        P->next = Nil;
+    } else {
+        P = Nil;
+    }
+}
+
+int nbList(List L) {
+    int count = 0;
+    address P = L.first;
+    while (P != Nil) {
+        count++;
+        P = P->next;
+    }
+    return count;
+}
+
+void deleteList(List &L) {
+    address P;
+    while (L.first != Nil) {
+        deleteFirst(L, P);
+        dealokasi(P);
+    }
+}
+```
+main.cpp
+```C++
+#include "Singlylist.h"
+
+int main() {
+    List L;
+    address P1, P2, P3, P4, P5 = Nil;
+    address temp;
+
+    createList(L);
+
+    P1 = alokasi(2);
+    insertFirst(L, P1);
+
+    P2 = alokasi(0);
+    insertFirst(L, P2);
+
+    P3 = alokasi(8);
+    insertFirst(L, P3);
+
+    P4 = alokasi(12);
+    insertFirst(L, P4);
+
+    P5 = alokasi(9);
+    insertFirst(L, P5);
+
+    deleteFirst(L, temp);
+    dealokasi(temp);
+
+    deleteLast(L, temp);
+    dealokasi(temp);
+
+    address prec = L.first->next;
+    deleteAfter(L, prec, temp);
+    dealokasi(temp);
+
+    printInfo(L);
+    cout << "Jumlah node : " << nbList(L) << endl;
+    cout << endl;
+
+    deleteList(L);
+    cout << "- List Berhasil Terhapus -" << endl;
+    cout << "Jumlah node : " << nbList(L) << endl;
+
+    return 0;
+}
+```
+
 ### Output Unguided 2 :
 
 ##### Output 1
-![Screenshot Output Unguided 2_1](https://github.com/(username github kalian)/(nama repository github kalian)/blob/main/(path folder menyimpan screenshot output)/(nama file screenshot output).png)
+![Screenshot Output Unguided 2_1](https://github.com/domulek/103112400170_Nathan-Domuli-Pasaribu/blob/main/Pertemuan4_Modul4/soalno2/Output-Unguided2-Modul4.png)
 
-contoh :
-![Screenshot Output Unguided 2_1](https://github.com/DhimazHafizh/2311102151_Muhammad-Dhimas-Hafizh-Fathurrahman/blob/main/Pertemuan1_Modul1/Output-Unguided2-1.png)
+Program tersebut adalah penerapan Singly Linked List dalam bahasa C++ yang berfungsi untuk melakukan penambahan, penghapusan, penampilan data, serta perhitungan jumlah elemen (node) di dalam list
 
-##### Output 2
-![Screenshot Output Unguided 2_2](https://github.com/(username github kalian)/(nama repository github kalian)/blob/main/(path folder menyimpan screenshot output)/(nama file screenshot output).png)
-
-penjelasan unguided 2
-
-### 3. (isi dengan soal unguided 3)
-
-```C++
-source code unguided 3
-```
-### Output Unguided 3 :
-
-##### Output 1
-![Screenshot Output Unguided 3_1](https://github.com/(username github kalian)/(nama repository github kalian)/blob/main/(path folder menyimpan screenshot output)/(nama file screenshot output).png)
-
-contoh :
-![Screenshot Output Unguided 3_1](https://github.com/DhimazHafizh/2311102151_Muhammad-Dhimas-Hafizh-Fathurrahman/blob/main/Pertemuan1_Modul1/Output-Unguided3-1.png)
-
-##### Output 2
-![Screenshot Output Unguided 3_2](https://github.com/(username github kalian)/(nama repository github kalian)/blob/main/(path folder menyimpan screenshot output)/(nama file screenshot output).png)
-
-penjelasan unguided 3
 
 ## Kesimpulan
-...
+Program ini merupakan implementasi Singly Linked List menggunakan bahasa C++, yang digunakan untuk menambah, menghapus, menampilkan data, dan menghitung total elemen (node) yang terdapat dalam list.
 
 ## Referensi
 [1] Triase. (2020). Diktat Edisi Revisi : STRUKTUR DATA. Medan: UNIVERSTAS ISLAM NEGERI SUMATERA UTARA MEDAN. 
 <br>[2] Indahyati, Uce., Rahmawati Yunianita. (2020). "BUKU AJAR ALGORITMA DAN PEMROGRAMAN DALAM BAHASA C++". Sidoarjo: Umsida Press. Diakses pada 10 Maret 2024 melalui https://doi.org/10.21070/2020/978-623-6833-67-4.
-<br>...
+<br>[3] Susanto, R. (2021). Analisis Struktur Data dan Algoritma pada Bahasa Pemrograman C++. Jurnal Teknologi Informasi dan Komputer, 5(2), 55–62.
