@@ -1,17 +1,16 @@
 # <h1 align="center">Laporan Praktikum Modul 1 - Singly Linked List (Bagian Kedua)</h1>
-<p align="center">Muhammad Dhimas Hafizh Fathurrahman - 2311102151</p>
+<p align="center"> Nathan Domuli Pasaribu - 103112400170</p>
 
 ## Dasar Teori
-isi dengan penjelasan dasar teori disertai referensi jurnal (gunakan kurung siku [] untuk pernyataan yang mengambil refernsi dari jurnal).
-contoh :
-Linked list atau yang disebut juga senarai berantai adalah Salah satu bentuk struktur data yang berisi kumpulan data yang tersusun secara sekuensial, saling bersambungan, dinamis, dan terbatas[1]. Linked list terdiri dari sejumlah node atau simpul yang dihubungkan secara linier dengan bantuan pointer.
+Struktur data linked list merupakan salah satu bentuk penyimpanan data dinamis yang terdiri atas sekumpulan node, di mana setiap node menyimpan data serta pointer yang menunjuk ke node berikutnya. Struktur ini memungkinkan penambahan dan penghapusan data dilakukan dengan lebih fleksibel dibandingkan array karena tidak memerlukan pergeseran elemen secara keseluruhan[1].
+
+Algoritma pencarian adalah prosedur sistematis yang digunakan untuk menemukan elemen tertentu dalam sekumpulan data. Efisiensi algoritma pencarian sangat bergantung pada metode yang digunakan dan karakteristik data yang dicari. Dua metode pencarian yang sering digunakan adalah Linear Search, yang memeriksa setiap elemen secara berurutan, dan Binary Search, yang bekerja lebih cepat pada data terurut dengan cara membagi ruang pencarian menjadi dua bagian secara berulang[2].
 
 ### A. Binary 
-...
-
+Algoritma pencarian yang berfungsi dengan membagi data yang telah terurut menjadi dua bagian secara berulang-ulang, kemudian membandingkan nilai di bagian tengah untuk menentukan apakah elemen yang dicari berada di sisi kiri atau kanan, hingga akhirnya elemen tersebut ditemukan atau dinyatakan tidak ada.
 
 ### B. Linear
-...
+Algoritma pencarian dasar yang menemukan elemen target dengan menelusuri setiap item dalam daftar atau array secara berurutan, mulai dari elemen pertama hingga elemen terakhir.
 
 ## Guided 
 
@@ -567,7 +566,7 @@ int main() {
 ### Output Unguided 1 :
 
 ##### Output 1
-![Screenshot Output Unguided 1_1](https://github.com/(username github kalian)/(nama repository github kalian)/blob/main/(path folder menyimpan screenshot output)/(nama file screenshot output).png)
+![Screenshot Output Unguided 1_1](https://github.com/domulek/103112400170_Nathan-Domuli-Pasaribu/blob/main/Pertemuan5_Modul5/Output-Unguided1-Modul5.png)
 
 
 Program tersebut digunakan untuk mencari data tertentu pada struktur data linked list dengan menerapkan metode binary search menggunakan bahasa C++. Program ini terlebih dahulu membuat linked list berisi data integer yang tersusun secara terurut, kemudian melakukan pencarian nilai dengan membagi posisi tengah (mid node) secara bertahap sampai data yang dicari berhasil ditemukan atau dinyatakan tidak ada.
@@ -666,7 +665,7 @@ int main() {
 ### Output Unguided 2 :
 
 ##### Output 1
-![Screenshot Output Unguided 2_1](https://github.com/(username github kalian)/(nama repository github kalian)/blob/main/(path folder menyimpan screenshot output)/(nama file screenshot output).png)
+![Screenshot Output Unguided 2_1](https://github.com/domulek/103112400170_Nathan-Domuli-Pasaribu/blob/main/Pertemuan5_Modul5/Output-Unguided2-Modul5.png)
 
 
 Program ini digunakan untuk mencari data tertentu pada struktur data linked list dengan menerapkan metode linear search menggunakan bahasa C++. Program ini terlebih dahulu membentuk linked list berisi beberapa data integer, menampilkan seluruh isinya, lalu melakukan pencarian berdasarkan nilai yang dimasukkan pengguna. Proses pencarian dilakukan dengan menelusuri setiap node secara berurutan dari awal hingga akhir daftar sampai data yang dicari ditemukan atau seluruh node telah diperiksa.
@@ -674,9 +673,8 @@ Program ini digunakan untuk mencari data tertentu pada struktur data linked list
 
 
 ## Kesimpulan
-...
+Hasil praktikum menunjukkan bahwa Singly Linked List merupakan struktur data yang fleksibel dan efisien dalam pengelolaan data. Algoritma Linear Search melakukan pencarian dengan menelusuri setiap node secara berurutan, sedangkan Algoritma Binary Search bekerja lebih cepat pada data yang terurut karena menggunakan metode pembagian dua bagian pencarian. Meskipun keduanya memiliki cara kerja yang berbeda, keduanya tetap memiliki peran penting dalam penerapan algoritma pencarian pada struktur data.
 
 ## Referensi
-[1] Triase. (2020). Diktat Edisi Revisi : STRUKTUR DATA. Medan: UNIVERSTAS ISLAM NEGERI SUMATERA UTARA MEDAN. 
-<br>[2] Indahyati, Uce., Rahmawati Yunianita. (2020). "BUKU AJAR ALGORITMA DAN PEMROGRAMAN DALAM BAHASA C++". Sidoarjo: Umsida Press. Diakses pada 10 Maret 2024 melalui https://doi.org/10.21070/2020/978-623-6833-67-4.
-<br>...
+[1] Munir, R. (2013). Algoritma dan Pemrograman dalam Bahasa C dan C++. Informatika Bandung.
+[2] Rosen, K. H. (2012). Discrete Mathematics and Its Applications (7th ed.). New York: McGraw-Hill.
