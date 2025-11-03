@@ -2,9 +2,7 @@
 <p align="center">Nathan Domuli Pasaribu - 103112400170</p>
 
 ## Dasar Teori
-isi dengan penjelasan dasar teori disertai referensi jurnal (gunakan kurung siku [] untuk pernyataan yang mengambil refernsi dari jurnal).
-contoh :
-Linked list atau yang disebut juga senarai berantai adalah Salah satu bentuk struktur data yang berisi kumpulan data yang tersusun secara sekuensial, saling bersambungan, dinamis, dan terbatas[1]. Linked list terdiri dari sejumlah node atau simpul yang dihubungkan secara linier dengan bantuan pointer.
+Menurut Newell, Shaw, dan Simon (1956), linked list merupakan struktur data dinamis yang menyimpan elemen secara tidak berurutan di memori, tetapi saling terhubung melalui pointer [1]. Salah satu variannya adalah doubly linked list, di mana setiap node memiliki dua pointer: next yang menunjuk ke node berikutnya dan prev yang menunjuk ke node sebelumnya [2]. Struktur ini memungkinkan penelusuran data ke dua arah serta memudahkan proses penyisipan dan penghapusan elemen di posisi mana pun tanpa perlu menggeser elemen lain. Meski demikian, penggunaan dua pointer menyebabkan kebutuhan memori menjadi lebih besar dibandingkan dengan singly linked list [3].
 
 ### A. Insert
 Operasi insert pada doubly linked list berfungsi untuk menambahkan node baru ke dalam list, baik pada bagian awal, tengah, maupun akhir, dengan menyesuaikan pointer next dan prev agar hubungan antar node tetap terjaga dengan benar.
@@ -1401,16 +1399,14 @@ int main() {
 ### Output Unguided 1 :
 
 ##### Output 1
-![Screenshot Output Unguided 1_1](https://github.com/(username github kalian)/(nama repository github kalian)/blob/main/(path folder menyimpan screenshot output)/(nama file screenshot output).png)
+![Screenshot Output Unguided 1_1](https://github.com/domulek/103112400170_Nathan-Domuli-Pasaribu/blob/main/Pertemuan6_Modul6/unguided1/Output-Unguided1-Modul6.png)
 
 
-penjelasan unguided 1 
+Program ini berfungsi untuk mengelola informasi kendaraan dengan memanfaatkan struktur data Doubly Linked List (linked list dua arah). Melalui program ini, pengguna dapat melakukan berbagai operasi seperti: menambahkan data kendaraan di bagian akhir list, memeriksa apakah nomor polisi sudah ada sebelumnya, menampilkan seluruh data kendaraan, mencari data berdasarkan nomor polisi, serta menghapus data tertentu menggunakan operasi deleteAfter.
 
 
 ## Kesimpulan
-...
+Doubly Linked List merupakan struktur data yang memungkinkan traversal data dilakukan ke dua arah dengan memanfaatkan pointer next dan prev. Pada praktikum ini, berbagai operasi seperti insert, update, search, dan delete dapat dilakukan dengan lebih efisien tanpa perlu menggeser elemen seperti pada struktur array. Meski demikian, struktur ini memerlukan lebih banyak memori karena setiap node menyimpan dua pointer.
 
 ## Referensi
-[1] Triase. (2020). Diktat Edisi Revisi : STRUKTUR DATA. Medan: UNIVERSTAS ISLAM NEGERI SUMATERA UTARA MEDAN. 
-<br>[2] Indahyati, Uce., Rahmawati Yunianita. (2020). "BUKU AJAR ALGORITMA DAN PEMROGRAMAN DALAM BAHASA C++". Sidoarjo: Umsida Press. Diakses pada 10 Maret 2024 melalui https://doi.org/10.21070/2020/978-623-6833-67-4.
-<br>...
+[1] Newell, A., Shaw, C., & Simon, H. A. (1956). Programming the Logic Theory Machine. RAND Corporation. [2] Wikipedia. (2025). Doubly linked list. Diakses dari https://en.wikipedia.org/wiki/Doubly_linked_list [3] Devopedia. (2024). Linked List (Data Structure). Diakses dari https://devopedia.org/linked-list-data-structure
