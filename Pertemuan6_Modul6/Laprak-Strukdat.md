@@ -6,17 +6,11 @@ isi dengan penjelasan dasar teori disertai referensi jurnal (gunakan kurung siku
 contoh :
 Linked list atau yang disebut juga senarai berantai adalah Salah satu bentuk struktur data yang berisi kumpulan data yang tersusun secara sekuensial, saling bersambungan, dinamis, dan terbatas[1]. Linked list terdiri dari sejumlah node atau simpul yang dihubungkan secara linier dengan bantuan pointer.
 
-### A. ...<br/>
-...
-#### 1. ...
-#### 2. ...
-#### 3. ...
+### A. Insert
+Operasi insert pada doubly linked list berfungsi untuk menambahkan node baru ke dalam list, baik pada bagian awal, tengah, maupun akhir, dengan menyesuaikan pointer next dan prev agar hubungan antar node tetap terjaga dengan benar.
 
-### B. ...<br/>
-...
-#### 1. ...
-#### 2. ...
-#### 3. ...
+### B. .Delete
+Operasi delete pada doubly linked list digunakan untuk menghapus node dari list dengan menyesuaikan pointer next dan prev pada node di sekitarnya agar struktur list tetap terhubung dan konsisten.
 
 ## Guided 
 
@@ -628,7 +622,7 @@ void updateBefore(linkedlist List, address nodeNext){
     }
 }
 ```
-penjelasan singkat guided 1
+Program ini berfungsi untuk mengelola data makanan dengan menggunakan struktur data Doubly Linked List, yang memungkinkan penambahan, penampilan, dan pembaruan data dari berbagai posisi dalam list.
 
 ### 2. Guided 2
 
@@ -1237,64 +1231,181 @@ void updateBefore(linkedlist List, address nodeNext){
     }
 }
 ```
-penjelasan singkat guided 2
+Program ini menggunakan struktur data Doubly Linked List untuk menyimpan serta mengelola informasi kendaraan yang meliputi nomor polisi, warna, dan tahun pembuatan.
 
 
 ## Unguided 
 
-### 1. (isi dengan soal unguided 1)
+### 1. Soal Unguided 1
 
+Doublylist.h
 ```C++
-source code unguided 1
+#ifndef DOUBLYLIST_H
+#define DOUBLYLIST_H
+
+#include <iostream>
+#include <string>
+#define Nil NULL
+
+using namespace std;
+
+struct kendaraan {
+    string nopol; 
+    string warna;
+    int thnBuat;
+};
+typedef kendaraan infotype;
+
+typedef struct ElmList *address;
+struct ElmList {
+    infotype info;
+    address next;
+    address prev;
+};
+
+struct List {
+    address first;
+    address last;
+};
+
+void CreateList(List &L);
+address alokasi(infotype x);
+void dealokasi(address &P);
+void insertLast(List &L, address P);
+address findElm(List L, string nopol);
+void deleteFirst(List &L, address &P);
+void deleteLast(List &L, address &P);
+void deleteAfter(address prev, address &p);
+bool cekList(List L, string nopol);
+void printInfo(List L);
+
+#endif
+```
+
+Doublylist.cpp
+```C++
+#ifndef DOUBLYLIST_H
+#define DOUBLYLIST_H
+
+#include <iostream>
+#include <string>
+#define Nil NULL
+
+using namespace std;
+
+struct kendaraan {
+    string nopol; 
+    string warna;
+    int thnBuat;
+};
+typedef kendaraan infotype;
+
+typedef struct ElmList *address;
+struct ElmList {
+    infotype info;
+    address next;
+    address prev;
+};
+
+struct List {
+    address first;
+    address last;
+};
+
+void CreateList(List &L);
+address alokasi(infotype x);
+void dealokasi(address &P);
+void insertLast(List &L, address P);
+address findElm(List L, string nopol);
+void deleteFirst(List &L, address &P);
+void deleteLast(List &L, address &P);
+void deleteAfter(address prev, address &p);
+bool cekList(List L, string nopol);
+void printInfo(List L);
+
+#endif
+```
+
+main.cpp
+```C++
+#include "Doublylist.h"
+
+using namespace std;
+
+int main() {
+    List L;
+    CreateList(L);
+    address P;
+    infotype data;
+    
+    int n;
+    cout << "Masukan banyak data : ";
+    cin >> n;
+    cout << endl;
+
+    for (int i = 0; i < n; i++) {
+        cout << "masukkan nomor polisi: ";
+        cin >> data.nopol;
+
+        if (cekList(L, data.nopol)) {
+            cout << "masukkan warna kendaraan: ";
+            cin >> data.warna;
+            cout << "masukkan tahun kendaraan: ";
+            cin >> data.thnBuat;
+            cout << "nomor polisi sudah terdaftar \n";
+        } else {
+            cout << "masukkan warna kendaraan: ";
+            cin >> data.warna;
+            cout << "masukkan tahun kendaraan: ";
+            cin >> data.thnBuat;
+
+            P = alokasi(data);
+            insertLast(L, P);
+        }
+        cout << endl;
+    }
+
+    cout << "DATA LIST 1 " << endl;
+    printInfo(L);
+
+    string cariNopol = "D001";
+    cout << "Masukan Nomor polisi yang dicari : " << cariNopol << endl;
+    address found = findElm(L, cariNopol);
+    if (found != Nil) {
+        cout << "Nomor Polisi : " << found->info.nopol 
+        << "\nWarna : " << found->info.warna 
+        << "\nTahun : " << found->info.thnBuat << endl << endl;
+    } else {
+        cout << cariNopol << " tidak ditemukan." << endl << endl;
+    }
+
+    address prev = L.first;
+    while (prev != Nil && prev->next != Nil) {
+        if (prev->next->info.nopol == "D003") {
+            break;
+        }
+        prev = prev->next;
+    }
+    if (prev != Nil && prev->next != Nil) {
+        deleteAfter(prev, P);
+        cout << "Data dengan nomor polisi D003 berhasil dihapus\n";
+    } else {
+        cout << "Data dengan nomor polisi D003 tidak ditemukan\n";
+    }
+    
+    cout << "DATA LIST 1" << endl;
+    printInfo(L);
+    return 0;
+}
 ```
 ### Output Unguided 1 :
 
 ##### Output 1
 ![Screenshot Output Unguided 1_1](https://github.com/(username github kalian)/(nama repository github kalian)/blob/main/(path folder menyimpan screenshot output)/(nama file screenshot output).png)
 
-contoh :
-![Screenshot Output Unguided 1_1](https://github.com/DhimazHafizh/2311102151_Muhammad-Dhimas-Hafizh-Fathurrahman/blob/main/Pertemuan1_Modul1/Output-Unguided1-1.png)
-
-##### Output 2
-![Screenshot Output Unguided 1_2](https://github.com/(username github kalian)/(nama repository github kalian)/blob/main/(path folder menyimpan screenshot output)/(nama file screenshot output).png)
 
 penjelasan unguided 1 
 
-### 2. (isi dengan soal unguided 2)
-
-```C++
-source code unguided 2
-```
-### Output Unguided 2 :
-
-##### Output 1
-![Screenshot Output Unguided 2_1](https://github.com/(username github kalian)/(nama repository github kalian)/blob/main/(path folder menyimpan screenshot output)/(nama file screenshot output).png)
-
-contoh :
-![Screenshot Output Unguided 2_1](https://github.com/DhimazHafizh/2311102151_Muhammad-Dhimas-Hafizh-Fathurrahman/blob/main/Pertemuan1_Modul1/Output-Unguided2-1.png)
-
-##### Output 2
-![Screenshot Output Unguided 2_2](https://github.com/(username github kalian)/(nama repository github kalian)/blob/main/(path folder menyimpan screenshot output)/(nama file screenshot output).png)
-
-penjelasan unguided 2
-
-### 3. (isi dengan soal unguided 3)
-
-```C++
-source code unguided 3
-```
-### Output Unguided 3 :
-
-##### Output 1
-![Screenshot Output Unguided 3_1](https://github.com/(username github kalian)/(nama repository github kalian)/blob/main/(path folder menyimpan screenshot output)/(nama file screenshot output).png)
-
-contoh :
-![Screenshot Output Unguided 3_1](https://github.com/DhimazHafizh/2311102151_Muhammad-Dhimas-Hafizh-Fathurrahman/blob/main/Pertemuan1_Modul1/Output-Unguided3-1.png)
-
-##### Output 2
-![Screenshot Output Unguided 3_2](https://github.com/(username github kalian)/(nama repository github kalian)/blob/main/(path folder menyimpan screenshot output)/(nama file screenshot output).png)
-
-penjelasan unguided 3
 
 ## Kesimpulan
 ...
