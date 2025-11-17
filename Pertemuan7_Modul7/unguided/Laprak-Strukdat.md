@@ -2,9 +2,7 @@
 <p align="center">Nathan Domuli Pasaribu - 103112400170</p>
 
 ## Dasar Teori
-isi dengan penjelasan dasar teori disertai referensi jurnal (gunakan kurung siku [] untuk pernyataan yang mengambil refernsi dari jurnal).
-contoh :
-Linked list atau yang disebut juga senarai berantai adalah Salah satu bentuk struktur data yang berisi kumpulan data yang tersusun secara sekuensial, saling bersambungan, dinamis, dan terbatas[1]. Linked list terdiri dari sejumlah node atau simpul yang dihubungkan secara linier dengan bantuan pointer.
+Struktur data adalah teknik untuk mengatur dan menyimpan informasi sehingga proses pengolahan dalam program dapat berjalan secara optimal. Salah satu struktur data dasar yang banyak dimanfaatkan adalah stack, yaitu struktur linear yang bekerja dengan prinsip LIFO (Last In, First Out), di mana elemen terakhir yang masuk akan menjadi elemen pertama yang diambil [1]. Stack menyediakan sejumlah operasi utama seperti push, pop, peek/top, isEmpty, dan isFull, yang memungkinkan pengelolaan data dari bagian atas secara terstruktur [2]. Struktur ini memiliki peranan penting dalam berbagai aplikasi, termasuk pengelolaan call stack, fitur undo/redo, evaluasi ekspresi aritmatika, proses backtracking, serta navigasi riwayat pada browser, sehingga pemahaman mengenai stack menjadi aspek penting dalam perancangan algoritma dan pengembangan perangkat lunak [3].
 
 ### A. Stack
 Stack adalah salah satu struktur data linear yang memiliki aturan khusus dalam pengolahan datanya. Elemen-elemen di dalam stack tersusun seperti tumpukan, sehingga hanya data yang paling baru ditambahkan yang bisa diakses atau diproses terlebih dahulu. Seluruh operasi dilakukan pada satu sisi yang disebut top (bagian atas stack). Stack bekerja dengan prinsip LIFO (Last In, First Out), yaitu elemen yang masuk terakhir akan menjadi elemen pertama yang dikeluarkan.
@@ -362,22 +360,182 @@ Program ini membangun stack menggunakan array dengan batas kapasitas tertentu. P
 ### 1. Unguided1
 stack.h
 ```C++
-source code unguided 1
+#ifndef STACK_H
+#define STACK_H
+#include <iostream>
+using namespace std;
+#define MaxEl 20
+#define Nil -1
+
+typedef int infotype;
+struct Stack{
+    infotype info[MaxEl];
+    int top;
+};
+void CreateStack(Stack &S);
+void push(Stack &S, infotype x);
+infotype pop(Stack &S);
+void printInfo(Stack S);
+void balikStack(Stack &S);
+bool isEmpty(Stack S);
+bool isFull(Stack S);
+void pushAscending(Stack &S, int x);
+void getInputStream(Stack &S);
+
+#endif
+```
+
+stack.cpp
+```C++
+#include "stack.h"
+using namespace std;
+
+void CreateStack(Stack &S){
+    S.top = Nil;
+}
+void push(Stack &S, infotype x){
+    if(!isFull(S)){
+        S.top++;
+        S.info[S.top] = x;
+    }else{
+        cout << "Stack penuh" << endl;
+    }
+
+}
+infotype pop(Stack &S) {
+    infotype x = -999;  
+    if (!isEmpty(S)) {  
+        x = S.info[S.top];  
+        S.top--;  
+    } else {
+        cout << "Stack Kosong!" << endl;  
+    }
+    return x; 
+}
+void printInfo(Stack S) {
+    if (isEmpty(S)) {  
+        cout << "Stack Kosong" << endl;  
+    } else {
+        cout << "[TOP] ";  
+        for (int i = S.top; i >= 0; i--) {  
+            cout << S.info[i] << " ";  
+        }
+        cout << endl; 
+    }
+}
+void balikStack(Stack &S) {
+    if (!isEmpty(S)) {  
+        Stack temp1, temp2;  
+        CreateStack(temp1); CreateStack(temp2);  
+
+        while (!isEmpty(S)) { push(temp1, pop(S)); }  
+
+        while (!isEmpty(temp1)) { push(temp2, pop(temp1)); }  
+
+        while (!isEmpty(temp2)) { push(S, pop(temp2)); }  
+    }
+}
+bool isEmpty(Stack S){
+    return S.top == Nil;
+}
+bool isFull(Stack S) {
+    return S.top == MaxEl - 1;  
+}
+void pushAscending(Stack &S, int x){
+    Stack Temp1, Temp2;
+    CreateStack(Temp1);
+    CreateStack(Temp2);
+    int t;
+    while(!isEmpty(S)){
+        t = pop(S);
+        if (t < x){
+            push(Temp1, t);
+            //break;
+        }else{
+            push(Temp2, t);
+        }
+    }
+    while(!isEmpty(Temp1)){
+        push(S, pop(Temp1));
+    }
+    push(S, x);
+    while(!isEmpty(Temp2)){
+       
+        push(S, pop(Temp2));
+    }
+}
+void getInputStream(Stack &S) {
+    char c;
+
+    cout << "Masukkan input: ";
+
+    cin.get(c);           
+
+    while (c != '\n') {   
+        push(S, c - '0'); 
+        cin.get(c);       
+    }
+}
+```
+
+main.cpp
+```C++
+#include "stack.h"
+#include <iostream>
+using namespace std;
+int main(){
+    cout << "Hello World!" << endl;
+    Stack S;
+    CreateStack(S);
+    push(S, 3);
+    push(S, 4);
+    push(S, 8);
+    pop(S);
+    push(S,2);
+    push(S, 3);
+    pop(S);
+    push(S, 9);
+    printInfo(S);
+    cout << "balik stack" << endl;
+    balikStack(S);
+    printInfo(S);
+    cout << endl;
+
+    cout << "Hello World!" << endl;
+    CreateStack(S);
+    pushAscending(S, 3);
+    pushAscending(S, 4);
+    pushAscending(S, 8);
+    pushAscending(S, 2);
+    pushAscending(S, 3);
+    pushAscending(S, 9);
+    printInfo(S);
+    cout << "balik stack" << endl;
+    balikStack(S);
+    printInfo(S);
+    cout << endl;
+
+    cout << "Hello World!" << endl;
+    CreateStack(S);
+    getInputStream(S);
+    printInfo(S);
+    cout << "balik stack" << endl;
+    balikStack(S);
+    printInfo(S);
+
+    return 0;
+}
 ```
 ### Output Unguided 1 :
 
 ##### Output 1
-![Screenshot Output Unguided 1_1](https://github.com/(username github kalian)/(nama repository github kalian)/blob/main/(path folder menyimpan screenshot output)/(nama file screenshot output).png)
+![Screenshot Output Unguided 1_1](https://github.com/domulek/103112400170_Nathan-Domuli-Pasaribu/blob/main/Pertemuan7_Modul7/unguided/Output-Unguided1-Modul7.png)
 
-
-
-penjelasan unguided 1 
+Program ini membangun struktur stack yang dilengkapi operasi dasar seperti push, pop, serta penampilan isi stack. Selain itu, terdapat fungsi tambahan seperti balikStack yang digunakan untuk membalik urutan elemen, pushAscending untuk menambahkan data sambil mempertahankan urutan menaik, dan getInputStream yang membaca input angka per digit. Pada file main.cpp, seluruh fungsi tersebut dicoba satu per satu untuk memperlihatkan cara kerja stack beserta fitur tambahannya.
 
 
 ## Kesimpulan
-...
+Praktikum ini memperlihatkan penerapan konsep stack yang bekerja dengan prinsip LIFO, baik melalui array maupun linked list. Mahasiswa belajar mengimplementasikan operasi dasar stack dan fitur tambahan seperti membalik urutan elemen, memasukkan data secara terurut, serta membaca input secara bertahap. Kegiatan ini membantu memahami penggunaan stack secara efisien dalam pemrograman.
 
 ## Referensi
-[1] Triase. (2020). Diktat Edisi Revisi : STRUKTUR DATA. Medan: UNIVERSTAS ISLAM NEGERI SUMATERA UTARA MEDAN. 
-<br>[2] Indahyati, Uce., Rahmawati Yunianita. (2020). "BUKU AJAR ALGORITMA DAN PEMROGRAMAN DALAM BAHASA C++". Sidoarjo: Umsida Press. Diakses pada 10 Maret 2024 melalui https://doi.org/10.21070/2020/978-623-6833-67-4.
-<br>...
+[1] Munir, R. (2015). Algoritma dan Struktur Data. Bandung: Informatika. [2] Kurniawan, A. (2019). Struktur Data dan Algoritma. Bandung: Informatika. [3] Rismayanti, R., & Santoso, H. B. (2017). “Implementasi Struktur Data Stack untuk Aplikasi Pengolahan Ungkapan Aritmatika.” Jurnal Teknologi Informasi dan Pendidikan, 10(2), 45–52.
