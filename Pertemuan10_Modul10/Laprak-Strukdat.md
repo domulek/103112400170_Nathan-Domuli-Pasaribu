@@ -2,13 +2,10 @@
 <p align="center">Nathan Domuli Pasaribu - 103112400170</p>
 
 ## Dasar Teori
-isi dengan penjelasan dasar teori disertai referensi jurnal (gunakan kurung siku [] untuk pernyataan yang mengambil refernsi dari jurnal).
-contoh :
-Linked list atau yang disebut juga senarai berantai adalah Salah satu bentuk struktur data yang berisi kumpulan data yang tersusun secara sekuensial, saling bersambungan, dinamis, dan terbatas[1]. Linked list terdiri dari sejumlah node atau simpul yang dihubungkan secara linier dengan bantuan pointer.
+Multi Linked List yang terhubung banyak terdiri dari beberapa kelompok Linked List yang terpisah, namun dapat diakses secara bersamaan. Setiap kelompok Linked List memiliki simpul-simpul yang saling terhubung di dalam kelompok tersebut. Jenis Linked List ini memungkinkan penyimpanan data dalam kelompok-kelompok terpisah, sambil menjaga struktur data yang terorganisir dan teratur. Dengan memahami perbedaan antar jenis Linked List, kita dapat memilih struktur data yang paling sesuai dengan kebutuhan aplikasi.[1]
 
 ### A. Tree
 Tree adalah struktur data yang membentuk hierarki melalui hubungan antara node yang dihubungkan oleh edge. Dimulai dari node utama yang disebut root, setiap node dapat memiliki satu atau lebih node anak (child), sementara node yang tidak memiliki anak disebut daun (leaf)
-
 
 ## Guided 
 
@@ -716,16 +713,15 @@ int main() {
 ### Output Unguided 1 :
 
 ##### Output 1
-![Screenshot Output Unguided 1_1](https://github.com/(username github kalian)/(nama repository github kalian)/blob/main/(path folder menyimpan screenshot output)/(nama file screenshot output).png)
+![Screenshot Output Unguided 1_1](https://github.com/domulek/103112400170_Nathan-Domuli-Pasaribu/blob/main/Pertemuan10_Modul10/unguided/Output-Unguided1-Modul10.png)
 
 
-
-
+Program ini berfungsi sebagai implementasi menyeluruh dari Binary Search Tree (BST) menggunakan bahasa C++. Program ini dapat melakukan berbagai operasi penting dalam struktur data BST, mulai dari pembuatan node, penyisipan data, pencarian, penghapusan, traversal, hingga perhitungan informasi statistik tentang tree.
 
 ## Kesimpulan
-...
+Multi Linked List adalah struktur data yang terdiri dari beberapa kelompok Linked List yang terpisah, namun tetap dapat diakses secara bersamaan, memudahkan pengelompokan data dengan cara yang terorganisir dan rapi. Sementara itu, Tree adalah struktur data hierarkis yang menghubungkan node melalui hubungan parent-child, dimulai dari root hingga leaf, yang sangat sesuai untuk merepresentasikan data bertingkat. Algoritma rekursif, di sisi lain, adalah teknik pemrograman di mana sebuah fungsi memanggil dirinya sendiri dengan ruang masalah yang semakin kecil, sehingga sangat efektif digunakan dalam proses dengan pola berulang, seperti traversal pada Tree. Dengan memahami ketiga konsep ini, kita dapat memilih struktur data atau algoritma yang paling sesuai dengan kebutuhan aplikasi.
 
 ## Referensi
-[1] Triase. (2020). Diktat Edisi Revisi : STRUKTUR DATA. Medan: UNIVERSTAS ISLAM NEGERI SUMATERA UTARA MEDAN. 
-<br>[2] Indahyati, Uce., Rahmawati Yunianita. (2020). "BUKU AJAR ALGORITMA DAN PEMROGRAMAN DALAM BAHASA C++". Sidoarjo: Umsida Press. Diakses pada 10 Maret 2024 melalui https://doi.org/10.21070/2020/978-623-6833-67-4.
-<br>...
+[1] Annisa. (2025). Pengertian Linked List : Structur Data dalam Pemprograman
+[2] Pebrianti, E., & Abdurramadan, N. (2025). Struktur Data Tree: Konsep, Jenis, dan Aplikasinya. Direktorat Pusat Teknologi Informasi.
+[3] Annisa. (2025). Algoritma Rekursif: Pengertian, Tujuan dan Jenisnya.
