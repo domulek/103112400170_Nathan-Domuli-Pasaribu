@@ -694,7 +694,11 @@ int main(){
 ### Output Unguided 1 :
 
 ##### Output 1
-![Screenshot Output Unguided 1_1](https://github.com/(username github kalian)/(nama repository github kalian)/blob/main/(path folder menyimpan screenshot output)/(nama file screenshot output).png)
+![Screenshot Output Unguided 1_1](https://github.com/domulek/103112400170_Nathan-Domuli-Pasaribu/blob/main/Pertemuan11_Modul13/unguided/Output-Unguided1-Modul13.png)
+
+![Screenshot Output Unguided 1_2](https://github.com/domulek/103112400170_Nathan-Domuli-Pasaribu/blob/main/Pertemuan11_Modul13/unguided/Output2-Unguided-Modul13.png)
+
+![Screenshot Output Unguided 1_3](https://github.com/domulek/103112400170_Nathan-Domuli-Pasaribu/blob/main/Pertemuan11_Modul13/unguided/Output3-Unguided-Modul13.png)
 
 
 Program ini mengimplementasikan Multi Linked List menggunakan bahasa C++ untuk memodelkan hubungan golongan hewan sebagai node parent dan data hewan sebagai node child. Setiap node parent menyimpan golongan hewan dan memiliki daftar child yang berisi data hewan berdasarkan golongan tersebut. Program ini menyediakan operasi untuk membuat list, alokasi dan dealokasi node, penambahan dan penghapusan data parent atau child, mencetak seluruh struktur multilevel linked list, serta mencari data hewan berdasarkan atribut ekor. Dengan struktur ini, program dapat menampilkan, menelusuri, dan mengelola data hewan secara bertingkat sesuai golongannya.
