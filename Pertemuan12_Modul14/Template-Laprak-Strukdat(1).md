@@ -359,13 +359,17 @@ int main(){
 ##### Output 1
 
 a. Menampilkan setiap node beserta node-node lain yang terhubung (PrintInfoGraph)
+
 ![Screenshot Output Unguided 1_1](https://github.com/domulek/103112400170_Nathan-Domuli-Pasaribu/blob/main/Pertemuan12_Modul14/unguided/Output1-Unguided-Modul14.png)
 
 b. Hasil penelusuran DFS
+
 ![Screenshot Output Unguided 1_2](https://github.com/domulek/103112400170_Nathan-Domuli-Pasaribu/blob/main/Pertemuan12_Modul14/unguided/Output2-Unguided-Modul14.png)
 
 c.Hasil penelusuran BFS.
+
 ![Screenshot Output Unguided 1_3](https://github.com/domulek/103112400170_Nathan-Domuli-Pasaribu/blob/main/Pertemuan12_Modul14/unguided/Output3-Unguided-Modul14.png)
+
 
 Program ini mengimplementasikan struktur data graph tak berarah (undirected graph) menggunakan linked list dalam bahasa C++. Graph dibangun dengan menambahkan node dari A hingga H, yang masing-masing menyimpan data berupa karakter serta daftar edge dalam bentuk adjacency list. Setiap hubungan antar node dibentuk dua arah melalui fungsi ConnectNode, yang memungkinkan penelusuran bolak-balik. Program ini mendukung algoritma penelusuran graph menggunakan Depth First Search (DFS) dan Breadth First Search (BFS), dengan setiap node diberi penanda "visited" untuk mencegah kunjungan berulang. Sebelum penelusuran dimulai, seluruh node diinisialisasi sebagai belum dikunjungi menggunakan fungsi Visited. Penelusuran DFS dilakukan secara mendalam mulai dari node A, sementara BFS dijalankan secara melebar dengan bantuan struktur data queue. Hasil penelusuran dan keterhubungan antar node ditampilkan melalui fungsi pencetakan, yang menunjukkan secara rinci proses pembuatan, penghubungan, dan penelusuran graph tak berarah.
 
