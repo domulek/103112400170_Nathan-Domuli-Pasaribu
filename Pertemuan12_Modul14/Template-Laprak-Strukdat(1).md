@@ -357,22 +357,23 @@ int main(){
 ### Output Unguided 1 :
 
 ##### Output 1
-![Screenshot Output Unguided 1_1](https://github.com/(username github kalian)/(nama repository github kalian)/blob/main/(path folder menyimpan screenshot output)/(nama file screenshot output).png)
 
-contoh :
-![Screenshot Output Unguided 1_1](https://github.com/DhimazHafizh/2311102151_Muhammad-Dhimas-Hafizh-Fathurrahman/blob/main/Pertemuan1_Modul1/Output-Unguided1-1.png)
+a. Menampilkan setiap node beserta node-node lain yang terhubung (PrintInfoGraph)
+![Screenshot Output Unguided 1_1](https://github.com/domulek/103112400170_Nathan-Domuli-Pasaribu/blob/main/Pertemuan12_Modul14/unguided/Output1-Unguided-Modul14.png)
 
-##### Output 2
-![Screenshot Output Unguided 1_2](https://github.com/(username github kalian)/(nama repository github kalian)/blob/main/(path folder menyimpan screenshot output)/(nama file screenshot output).png)
+b. Hasil penelusuran DFS
+![Screenshot Output Unguided 1_2](https://github.com/domulek/103112400170_Nathan-Domuli-Pasaribu/blob/main/Pertemuan12_Modul14/unguided/Output2-Unguided-Modul14.png)
 
-penjelasan unguided 1 
+c.Hasil penelusuran BFS.
+![Screenshot Output Unguided 1_3](https://github.com/domulek/103112400170_Nathan-Domuli-Pasaribu/blob/main/Pertemuan12_Modul14/unguided/Output3-Unguided-Modul14.png)
+
+Program ini mengimplementasikan struktur data graph tak berarah (undirected graph) menggunakan linked list dalam bahasa C++. Graph dibangun dengan menambahkan node dari A hingga H, yang masing-masing menyimpan data berupa karakter serta daftar edge dalam bentuk adjacency list. Setiap hubungan antar node dibentuk dua arah melalui fungsi ConnectNode, yang memungkinkan penelusuran bolak-balik. Program ini mendukung algoritma penelusuran graph menggunakan Depth First Search (DFS) dan Breadth First Search (BFS), dengan setiap node diberi penanda "visited" untuk mencegah kunjungan berulang. Sebelum penelusuran dimulai, seluruh node diinisialisasi sebagai belum dikunjungi menggunakan fungsi Visited. Penelusuran DFS dilakukan secara mendalam mulai dari node A, sementara BFS dijalankan secara melebar dengan bantuan struktur data queue. Hasil penelusuran dan keterhubungan antar node ditampilkan melalui fungsi pencetakan, yang menunjukkan secara rinci proses pembuatan, penghubungan, dan penelusuran graph tak berarah.
 
 
 
 ## Kesimpulan
-...
+Graph adalah struktur data non-linier yang efisien untuk menggambarkan hubungan antar data melalui simpul (vertex) dan sisi (edge). Struktur ini memungkinkan pemodelan masalah yang kompleks. Berdasarkan arah hubungan antar simpul, graph dibagi menjadi graph berarah dan graph tidak berarah, masing-masing dengan karakteristik dan penggunaan yang berbeda. Dengan kemampuannya untuk menggambarkan hubungan antar data secara fleksibel, graph menjadi struktur data yang sangat penting dalam pengembangan algoritma dan sistem komputasi saat ini.
 
 ## Referensi
-[1] Triase. (2020). Diktat Edisi Revisi : STRUKTUR DATA. Medan: UNIVERSTAS ISLAM NEGERI SUMATERA UTARA MEDAN. 
-<br>[2] Indahyati, Uce., Rahmawati Yunianita. (2020). "BUKU AJAR ALGORITMA DAN PEMROGRAMAN DALAM BAHASA C++". Sidoarjo: Umsida Press. Diakses pada 10 Maret 2024 melalui https://doi.org/10.21070/2020/978-623-6833-67-4.
-<br>...
+[1]Ginting, S. H. N., Effendi, H., Kumar, S., Marsisno, W., Sitanggang, Y. R. U., Anwar, K., ... & Smrti, N. N. E. (2024). Pengantar struktur data. Penerbit Mifandi Mandiri Digital, 1(01)
+[2]Trivusi. (2022, September 16). Struktur data graph: Pengertian, jenis, dan kegunaannya. Trivusi
